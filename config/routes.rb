@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'answer/new'
+  get 'answer/create'
+  get 'answer/edit'
+  get 'answer/destroy'
   get 'correction/new'
   get 'correction/create'
   get 'correction/edit'
