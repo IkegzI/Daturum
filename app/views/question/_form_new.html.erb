@@ -1,0 +1,11 @@
+<%= form_for :question, url: question_create_path do |f| %>
+    <p>
+        <%= f.label 'Заголовок вопроса:' %>
+        <%= f.text_field :header %>
+    </p>
+    <p>
+        <%= f.label 'Текст вопроса:' %>
+        <%= f.text_field :text %>
+    </p>
+    <%= f.submit 'Сохранить вопрос' %>
+<% end %>

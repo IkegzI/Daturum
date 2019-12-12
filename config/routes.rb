@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'question/new'
-  get 'question/create'
+  post 'question/create'
   get 'question/edit'
   get 'question/destroy'
   get 'question/index'
