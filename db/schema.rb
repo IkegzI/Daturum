@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_12_022138) do
+ActiveRecord::Schema.define(version: 2019_12_12_022720) do
+
+  create_table "answers", force: :cascade do |t|
+    t.text "text"
+    t.integer "question_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
+  create_table "corrections", force: :cascade do |t|
+    t.text "text"
+    t.integer "answer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["answer_id"], name: "index_corrections_on_answer_id"
+  end
 
   create_table "questions", force: :cascade do |t|
     t.string "header"
