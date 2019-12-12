@@ -1,0 +1,7 @@
+<%= form_for :answer, url: question_create_path do |f| %>
+    <p>
+        <%= f.label 'Дать ответ:' %>
+        <%= f.text_field :header %>
+    </p>
+    <%= f.submit 'Сохранить ответ' %>
+<% end %>
