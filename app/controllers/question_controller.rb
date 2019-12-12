@@ -6,6 +6,10 @@ class QuestionController < ApplicationController
     @quest = Question.all
   end
 
+  def show
+    @quest = Question.find(params_id)
+  end
+
   def create
     quest = Question.new(params_question)
     quest.save
@@ -22,5 +26,9 @@ class QuestionController < ApplicationController
 
   def params_question
     params.require(:question).permit(:header, :text)
+  end
+
+  def params_id
+    params.require(:id)
   end
 end

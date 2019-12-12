@@ -1,0 +1,10 @@
+<h1>Вопросы</h1>
+
+<%= link_to 'Создать вопрос', question_new_path%>
+
+<div>
+    <h4><%= @quest.header %></h4>
+    <p><%= @quest.text %></p>
+</div>
+
+<%= render 'answer/form_new'%>

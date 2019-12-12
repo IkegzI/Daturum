@@ -1,0 +1,7 @@
+<div class='answer'>
+<% @q.answers.each do |ans| %>
+    <% @ans = ans %>
+    <p><%= ans.text %><p>
+        <%= render 'correction/show', object: @ans %>
+<% end %>
+</div>
