@@ -1,9 +1,9 @@
-<%= form_for :answer, url: answer_create_path do |f| %>
+<%= form_for :answer, url: answer_create_path, class: :form_answer do |f| %>
     <p>
         <%= f.label 'Дать ответ:' %>
         <%= f.text_field :text %>
 
-        <%= f.hidden_field :question_id , value: params.require(:id) %>
+        <%= f.hidden_field :question_id, value: @q.id %>
     </p>
     <%= f.submit 'Сохранить ответ' %>
 <% end %>

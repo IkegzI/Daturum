@@ -1,7 +1,13 @@
 <div class='answer'>
-<% @q.answers.each do |ans| %>
+  <% @q.answers.each do |ans| %>
+    <p>
+      <%= ans.text %>
+    </p>
     <% @ans = ans %>
-    <p><%= ans.text %><p>
-        <%= render 'correction/show', object: @ans %>
+    <%= render 'correction/show', object: @ans %>
+    <div class="visible_correction" id="visible_correction_<%= ans.id %>">
+      <%= render 'correction/form_new', object: @ans.id %>
+    </div>
+    <p onclick="OnClickСorrection('visible_correction_<%= ans.id %>')">Коррекция ответа</p>
 <% end %>
 </div>

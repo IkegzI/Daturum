@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get "answer/destroy"
 
   get "correction/new"
-  get "correction/create"
+  post "correction/create"
   get "correction/edit"
   get "correction/destroy"
 

@@ -1,0 +1,9 @@
+<%= form_for :correction, url: correction_create_path, class: :form_correction do |f| %>
+    <p>
+        <%= f.label 'Корректировка ответа:' %>
+        <%= f.text_field :text %>
+
+        <%= f.hidden_field :answer_id, value: @q.id %>
+    </p>
+    <%= f.submit 'Сохранить' %>
+<% end %>

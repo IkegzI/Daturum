@@ -2,11 +2,14 @@
 
 <%= link_to 'Создать вопрос', question_new_path%>
 <% @quest.each do |q| %>
-    <% @q = q%>
+    <% @q, @ans = q, q.answers %>
         <div>
             <h4><%= q.header %></h4>
             <p><%= q.text %></p>
             <%= render 'answer/show', object: @q %>
+          <div class="visible_answer" id="visible_answer_<%= q.id %>">
+            <%= render 'answer/form_new', object: @q %>
+          </div>
+          <p onclick="OnClickAnswer('visible_answer_<%= q.id %>')">ответ</p>
         </div>
-    <%= link_to 'Подробнее', "show/#{q.id}" %>
 <% end %>
