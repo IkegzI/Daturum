@@ -15,7 +15,6 @@
 //= require turbolinks
 //= require_tree .
 
-
 function OnClickAnswer(elem){
     var str = document.getElementById(elem);
     str.style.display = 'block'

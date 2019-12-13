@@ -3,7 +3,8 @@
     <p>
       <%= ans.text %>
     </p>
-    <% @ans = ans %>
+          <% @ans = ans %>
     <%= render 'correction/index', object: @ans %>
+    <p onclick="OnClickСorrection('visible_correction_<%= ans.id %>')">Коррекция ответа</p>
 <% end %>
 </div>
