@@ -4,10 +4,6 @@
       <%= ans.text %>
     </p>
     <% @ans = ans %>
-    <%= render 'correction/show', object: @ans %>
-    <div class="visible_correction" id="visible_correction_<%= ans.id %>">
-      <%= render 'correction/form_new', object: @ans.id %>
-    </div>
-    <p onclick="OnClickСorrection('visible_correction_<%= ans.id %>')">Коррекция ответа</p>
+    <%= render 'correction/index', object: @ans %>
 <% end %>
 </div>
