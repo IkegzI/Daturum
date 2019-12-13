@@ -1,11 +1,11 @@
 <%= form_for :question, url: question_create_path do |f| %>
     <p>
-        <%= f.label 'Заголовок вопроса:' %>
-        <%= f.text_field :header %>
+        <h4><%= f.label 'Заголовок вопроса:' %></h4>
+        <%= f.text_field :header, class: :text_field%>
     </p>
     <p>
-        <%= f.label 'Текст вопроса:' %>
-        <%= f.text_field :text %>
+        <h4><%= f.label 'Текст вопроса:' %></h4>
+        <%= f.text_field :text, class: :text_field %>
     </p>
     <%= f.submit 'Сохранить вопрос' %>
 <% end %>

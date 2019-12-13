@@ -2,4 +2,4 @@
 <div class="visible_answer" id="visible_answer_<%= @q.id %>">
   <%= render 'answer/form_new', object: @q %>
 </div>
-<p onclick="OnClickAnswer('visible_answer_<%= @q.id %>')">ответ</p>
+<a onclick="OnClickAnswerDisplay('visible_answer_<%= @q.id %>')">Дать ответ</a>

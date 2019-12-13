@@ -1,10 +1,10 @@
-<div class='answer'>
+<div class='answer border-left'>
   <% @q.answers.each do |ans| %>
-    <p>
+    <p class="padding-left">
       <%= ans.text %>
     </p>
           <% @ans = ans %>
     <%= render 'correction/index', object: @ans %>
-    <p onclick="OnClickСorrection('visible_correction_<%= ans.id %>')">Коррекция ответа</p>
+    <a class="padding-left" onclick="OnClickСorrectionDisplay('visible_correction_<%= ans.id %>')">Предложить правку</a>
 <% end %>
 </div>

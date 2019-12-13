@@ -1,11 +1,13 @@
 <h1>Вопросы</h1>
 
-<%= link_to 'Создать вопрос', question_new_path%>
+
+
 <% @quest.each do |q| %>
     <% @q = q %>
-        <div>
+        <div class="border-left padding-left">
             <h4><%= q.header %></h4>
             <p><%= q.text %></p>
          <%= render 'answer/index', object: @q  %>
         </div>
 <% end %>
+<%= link_to 'Создать вопрос', question_new_path, class: 'non_decoration'%>

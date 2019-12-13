@@ -1,9 +1,9 @@
 <%= form_for :correction, url: correction_create_path, class: :form_correction do |f| %>
     <p>
-        <%= f.label 'Корректировка ответа:' %>
-        <%= f.text_field :text %>
+  <h4><%= f.label 'Предложить правку:', onclick: "OnClickСorrectionHidden('visible_correction_#{@ans.id}')"  %><h4>
+        <%= f.text_field :text, class: :text_field %>
 
         <%= f.hidden_field :answer_id, value: @ans.id %>
     </p>
-    <%= f.submit 'Сохранить' %>
+    <%= f.submit 'Сохранить', class: 'button' %>
 <% end %>

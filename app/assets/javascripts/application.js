@@ -15,11 +15,19 @@
 //= require turbolinks
 //= require_tree .
 
-function OnClickAnswer(elem){
+function OnClickAnswerDisplay(elem){
     var str = document.getElementById(elem);
     str.style.display = 'block'
 }
-function OnClickСorrection(elem){
+function OnClickAnswerHidden(elem){
+    var str = document.getElementById(elem);
+    str.style.display = 'none'
+}
+function OnClickСorrectionDisplay(elem){
     var str = document.getElementById(elem);
     str.style.display = 'block'
+}
+function OnClickСorrectionHidden(elem){
+    var str = document.getElementById(elem);
+    str.style.display = 'none'
 }

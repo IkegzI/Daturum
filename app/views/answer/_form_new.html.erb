@@ -1,9 +1,9 @@
-<%= form_for :answer, url: answer_create_path, class: :form_answer do |f| %>
+<%= form_for :answer, url: answer_create_path, class: :form_answer, onclick: "OnClickAnswer(this.id)"  do |f| %>
     <p>
-        <%= f.label 'Дать ответ:' %>
-        <%= f.text_field :text %>
+        <h4><%= f.label 'Дать ответ:', onclick: "OnClickAnswerHidden('visible_answer_' + #{@q.id})" %></h4>
+        <%= f.text_field :text, class: :text_field %>
 
-        <%= f.hidden_field :question_id, value: @q.id %>
+        <%= f.hidden_field :question_id, value: @q.id%>
     </p>
-    <%= f.submit 'Сохранить ответ' %>
+    <%= f.submit 'Сохранить ответ', class: 'button' %>
 <% end %>
