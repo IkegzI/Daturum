@@ -1,7 +1,11 @@
-<div class='correction border-left padding-left'>
+<div class='correction border-left padding-left' >
     <% @ans.corrections.each do |cor| %>
       <p>
         <%= cor.text %>
+        <h4 id="visible_correction_success_<%= @ans.id %>_form" onclick="OnClickСorrectionSuccessDisplay('visible_correction_success_<%= @ans.id %>')">Принять правку?</h4>
       </p>
+    <div  class="visible_correction"  id="visible_correction_success_<%= @ans.id %>">
+      <%= render 'correction/form_success' %>
+    </div>
     <% end %>
 </div>

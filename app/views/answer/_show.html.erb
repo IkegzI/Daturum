@@ -5,6 +5,6 @@
     </p>
           <% @ans = ans %>
     <%= render 'correction/index', object: @ans %>
-    <a class="padding-left" onclick="OnClickСorrectionDisplay('visible_correction_<%= ans.id %>')">Предложить правку</a>
+    <a class="padding-left" id="correction_give" onclick="OnClickСorrectionDisplay('visible_correction_<%= ans.id %>')">Предложить правку</a>
 <% end %>
 </div>

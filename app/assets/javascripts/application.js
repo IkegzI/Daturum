@@ -18,16 +18,37 @@
 function OnClickAnswerDisplay(elem){
     var str = document.getElementById(elem);
     str.style.display = 'block'
+    var str = document.getElementById('answer_give')
+    str.style.display = 'none'
 }
 function OnClickAnswerHidden(elem){
     var str = document.getElementById(elem);
     str.style.display = 'none'
+    var str = document.getElementById('answer_give')
+    str.style.display = ''
 }
 function OnClickСorrectionDisplay(elem){
     var str = document.getElementById(elem);
     str.style.display = 'block'
+    var str = document.getElementById('correction_give')
+    str.style.display = 'none'
 }
 function OnClickСorrectionHidden(elem){
     var str = document.getElementById(elem);
     str.style.display = 'none'
+    var str = document.getElementById('correction_give')
+    str.style.display = ''
+}
+
+function OnClickСorrectionSuccessDisplay(elem){
+    var str = document.getElementById(elem);
+    str.style.display = 'block'
+    var str = document.getElementById(elem+'_form')
+    str.style.display = 'none'
+}
+function OnClickСorrectionSuccessHidden(elem) {
+    var str = document.getElementById(elem);
+    str.style.display = 'none'
+    var str = document.getElementById(elem+'_form')
+    str.style.display = ''
 }
