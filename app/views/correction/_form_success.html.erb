@@ -1,9 +1,10 @@
-<%= form_for :correction, url: correction_create_path, class: :form_correction do |f| %>
+<%= form_for :correction, url: correction_success_path, class: :form_correction do |f| %>
     <p>
   <h4><%= f.label 'Принять правку:', onclick: "OnClickСorrectionSuccessHidden('visible_correction_success_#{@ans.id}')"  %><h4>
-        <%= f.text_field :text, class: :text_field %>
+        <%= f.text_field :text, value: @ans.text + ' ' + @cor.text, class: :text_field %>
 
         <%= f.hidden_field :answer_id, value: @ans.id %>
+        <%= f.hidden_field :correction_id, value: @cor.id %>
     </p>
     <%= f.submit 'Принять правку', class: 'button' %>
 <% end %>

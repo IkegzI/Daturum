@@ -21,12 +21,14 @@ function OnClickAnswerDisplay(elem){
     var str = document.getElementById(elem+'_give')
     str.style.display = 'none'
 }
+
 function OnClickAnswerHidden(elem){
     var str = document.getElementById(elem);
     str.style.display = 'none'
     var str = document.getElementById(elem+'_give')
     str.style.display = ''
 }
+
 function OnClickСorrectionDisplay(elem){
     var str = document.getElementById(elem);
     str.style.display = 'block'
@@ -46,6 +48,7 @@ function OnClickСorrectionSuccessDisplay(elem){
     var str = document.getElementById(elem+'_form')
     str.style.display = 'none'
 }
+
 function OnClickСorrectionSuccessHidden(elem) {
     var str = document.getElementById(elem);
     str.style.display = 'none'

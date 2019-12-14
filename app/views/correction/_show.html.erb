@@ -5,7 +5,8 @@
         <h4 id="visible_correction_success_<%= @ans.id %>_form" onclick="OnClickСorrectionSuccessDisplay('visible_correction_success_<%= @ans.id %>')">Принять правку?</h4>
       </p>
     <div  class="visible_correction"  id="visible_correction_success_<%= @ans.id %>">
-      <%= render 'correction/form_success' %>
+      <% @cor = cor %>>
+      <%= render 'correction/form_success', object: @cor %>
     </div>
     <% end %>
 </div>

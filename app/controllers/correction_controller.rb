@@ -7,7 +7,8 @@ class CorrectionController < ApplicationController
     redirect_to root_path
   end
 
-  def edit
+  def success
+    cor = Correction.find(params_correction_success[:correction_id])
   end
 
   def destroy
@@ -22,4 +23,8 @@ class CorrectionController < ApplicationController
     def params_correction
       params.require(:correction).permit(:text, :answer_id)
     end
+
+  def params_correction_success
+    params.require(:correction).permit(:correction_id, :answer_id)
+  end
 end
